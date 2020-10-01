@@ -87,32 +87,47 @@ form > input {
   background-position: center;
   text-decoration: line-through;
 }
-.clr-button{
-    position: fixed;
-}
+
+
 button {
-    
+  
   background-color: transparent;
   border: 1px solid #e64944;
   color: white;
   font-size: 16px;
-  padding: 1px;
+ 
 }
 
 input::placeholder {
   color: teal;
 }
+.btn{
+display:flex;
+     flex-direction: row;
+  overflow: hidden;
+padding:4rem;
+}
 
 .clr-btn{
-    height:4rem;
-    margin:2rem;
-     overflow: hidden;
+    overflow: hidden;
   position: absolute;
   top: -1;
-  right:0;
+  right: 0;
   bottom: 0;
   left: 0;
+padding:1.2rem;
 }
+
+.clr-btn2{
+    overflow: hidden;
+  position: absolute;
+  top: -1;
+  right: 0;
+  bottom: 0;
+  left: -1;
+  padding:1.2rem;
+}
+
 
 .vidContain {
     width:300px; height:200px;
@@ -120,12 +135,7 @@ input::placeholder {
     display:inline-block;
     margin:10px;
 }
-.vid {
-    position: absolute; 
-    top: 0; left:0;
-    width: 100%; height: 100%; 
-    z-index: -1;
-}    
+  
 .content {
     position:absolute;
     top:0; left:0;

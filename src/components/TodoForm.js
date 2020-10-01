@@ -7,30 +7,37 @@ class TodoForm extends React.Component {
             newTask: ''
         };
     }
-local
+    local
     handleChanges = (e) => {
-        
+
         this.setState({ ...this.state, newTask: e.target.value });
     }
 
     submitTask = (e) => {
         e.preventDefault();
-       localStorage.setItem(
-        this.props.addToDo(this.state.newTask),
-        this.setState({ ...this.state, newTask: '' }))
+        localStorage.setItem(
+            this.props.addToDo(this.state.newTask),
+            this.setState({ ...this.state, newTask: '' }))
     };
+
+    saveData = () => {
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem(this.state.newTask, this.state.newTask)
+    }
+}
 
     render() {
         return (
             <form onSubmit={this.submitTask}>
                 <input className='Input'
+                   
                     type='text'
                     name='task'
                     value={this.state.newTask}
                     onChange={this.handleChanges}
                 />
                 <div className='btn-contain'>
-                <button>Add</button>
+                    <button onClick={this.saveData}>Add</button>
                 </div >
             </form>
         )
@@ -38,3 +45,9 @@ local
 }
 
 export default TodoForm
+
+// saveData = () => {
+//     if (typeof (Storage) !== "undefined") {
+//         localStorage.setItem("newTask", this.state.newTask)
+//     }
+// }
