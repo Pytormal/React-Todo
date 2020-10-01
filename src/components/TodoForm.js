@@ -24,21 +24,29 @@ class TodoForm extends React.Component {
     if (typeof (Storage) !== "undefined") {
         localStorage.setItem(this.state.newTask, this.state.newTask)
     }
-}
+    }
+    
 
     render() {
         return (
-            <form onSubmit={this.submitTask}>
-                <input className='Input'
-                   
-                    type='text'
-                    name='task'
-                    value={this.state.newTask}
-                    onChange={this.handleChanges}
-                />
+            <form className='nPut' onSubmit={this.submitTask}>
+                
                 <div className='btn-contain'>
+                    
                     <button onClick={this.saveData}>Add</button>
+                       
+                        <div>
+                            <input className='Input'
+                            type='text'
+                            name='task'
+                            value={this.state.newTask}
+                            onChange={this.handleChanges}
+                            />
+                        </div>
+                  
                 </div >
+                
+              
             </form>
         )
     }

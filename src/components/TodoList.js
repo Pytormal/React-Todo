@@ -13,11 +13,13 @@ const TodoList = (props) => {
             {props.task.map((task) => (
                 <Todo key={task.id} task={task} toggleTask={props.toggleTask} />
             ))}
+            <div className='btn-contain2'>
             <button className='clr-btn' onClick={props.clearCompleted}>
                 Clear Completed Tasks
             </button>
-            <button className='clr-btn2' onClick={ClearData}>
-                Clear Local app data</button>
+            <button className='clr-btn' onClick={ClearData}>
+                    Clear Local app data</button>
+            </div>
         </div>
     )
 }

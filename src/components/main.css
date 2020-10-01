@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
 html,
 body {
   width: 100%;
@@ -9,7 +9,7 @@ body {
 
 body {
   background-image:url('https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
-  background-size: 200vh auto;
+  background-size: 220vh auto;
   background-attachment: fixed;
   background-position: center;
 }
@@ -24,42 +24,40 @@ div,
 p,
 span {
   color:white;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cinzel Decorative', cursive;
 }
 
+
 .App {
-  font-family: sans-serif;
   text-align: center;
-  padding: 0 36px;
-  max-width: 665px;
+  width: 100%;
   margin: 0 auto;
 }
 
+/* Header */
 .h-container{
+  padding-top:2rem;
+  padding-bottom:2rem;
+    width:100%;
     display:flex;
-    justify-content:center;
+    justify-content: space-around;
+ 
 }
+
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-h1 {
-  text-align: left;
+  
 }
 
-.todo-list {
-  margin: 0 auto;
-  width: 20rem;
-}
-.task {
-  width: 100%;
-  text-align: right;
-  margin: 4px 0;
-  padding-left: 10px;
-  cursor: pointer;
-}
+.nPut{
+  display:flex;
+  flex-direction: column;
+  width:50%;
 
+}
 
 form {
   width: 100%;
@@ -67,30 +65,99 @@ form {
   justify-content: center;
 }
 
-form > input {
+input {
   background-color: transparent;
   border: 0;
   padding: 6px 0;
   font-size: 1.2rem;
-  width: 240px;
+  width: 80%;
   outline: 5;
-  color: white;
+  color: black;
   font-weight: bold;
   border-bottom: 2px dashed teal;
   margin-right: 8px;
 }
+
+/* Header Media Querie */
+ @media (max-width:768px){
+   .h-container{
+     flex-direction: column;
+   }
+   .header{
+     justify-content: center;
+   }
+   .nPut{
+    margin-top:2rem;
+    width:100%;
+   }
+ }
+
+ @media (max-width:425px){
+
+    .h-container{
+     justify-content:center;
+   }
+   .header{
+     justify-content: center;
+   }
+   .nPut{
+    margin-top:2rem;
+    width:100%;
+   }
+ }
+
+/* app body */
+.todo-contain{
+  width: 90%; 
+  margin: 0 auto;
+ justify-content: center;
+}
+.todo-list {
+  margin: 0 auto;
+ 
+}
+.task {
+  width: 100%;
+  text-align: right;
+  flex-wrap: wrap;
+  margin: 4px 0;
+   padding-top:1.5rem;
+  cursor: pointer;
+}
+
 .task.completed {
    background-image:url('https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
-
   background-size: 100%;
   background-attachment: fixed;
   background-position: center;
   text-decoration: line-through;
 }
 
+/* Media Queries for app body */
+@media (max-width:955px){
+  .todo-contain{
+    font-size:.9rem;
+  }
+}
+@media (max-width:846px){
+  .todo-contain{
+    font-size:.8rem;
+  }
+}
 
+@media (max-width:775px){
+  .todo-contain{
+    font-size:.7rem;
+  }
+}
+@media (max-width:680px){
+  .todo-contain{
+      font-size:.6rem;
+  }
+}
+
+/* Clear Button */
 button {
-  
   background-color: transparent;
   border: 1px solid #e64944;
   color: white;
@@ -101,33 +168,53 @@ button {
 input::placeholder {
   color: teal;
 }
+
 .btn{
 display:flex;
      flex-direction: row;
   overflow: hidden;
 padding:4rem;
 }
-
+.btn-contain2{
+  display:flex;
+  justify-content: space-evenly;
+  margin-top:2rem;
+}
 .clr-btn{
-    overflow: hidden;
-  position: absolute;
-  top: -1;
-  right: 0;
-  bottom: 0;
-  left: 0;
-padding:1.2rem;
+  width:8rem;
 }
 
-.clr-btn2{
-    overflow: hidden;
-  position: absolute;
-  top: -1;
-  right: 0;
-  bottom: 0;
-  left: -1;
-  padding:1.2rem;
+@media (max-width:595){
+ .todo-list{
+   width:100%;
+ }
 }
 
+@media (max-width:500px){
+  .todo-contain{
+     width:50%;
+     display:flex;
+     flex-direction: row;
+  }
+   .todo-list{
+    display:flex;
+   flex-direction: column;
+   justify-content:center;
+   
+  }
+  .task{
+    width:50%;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+      border-bottom:.1rem solid teal;
+  }
+ 
+  .btn-contain{
+    display:flex;
+    justify-content:space-around;
+  }
+}
 
 .vidContain {
     width:300px; height:200px;
