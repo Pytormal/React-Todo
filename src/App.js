@@ -87,7 +87,7 @@ class App extends React.Component {
     return (
       <section className='App'>
         <div className="h-container">
-          <h2 className="header">Welcome to your Todo App!</h2>
+          <h1 className="header">Welcome to your Todo App!</h1>
           <TodoForm addToDo={this.addToDo} />
         </div>
         

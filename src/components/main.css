@@ -41,12 +41,12 @@ span {
     width:100%;
     display:flex;
     justify-content: space-around;
- 
 }
 
 
 .header {
   display: flex;
+  font-size:1.6rem;
   justify-content: space-between;
   align-items: center;
   
@@ -56,8 +56,10 @@ span {
   display:flex;
   flex-direction: column;
   width:50%;
-
 }
+ .addButton {
+     font-size:1.5rem;
+   }
 
 form {
   width: 100%;
@@ -79,6 +81,7 @@ input {
 }
 
 /* Header Media Querie */
+ 
  @media (max-width:768px){
    .h-container{
      flex-direction: column;
@@ -86,29 +89,35 @@ input {
    .header{
      justify-content: center;
    }
-   .nPut{
+   .nPut {
     margin-top:2rem;
     width:100%;
    }
  }
 
- @media (max-width:425px){
+ @media (max-width:426px){
 
     .h-container{
      justify-content:center;
+     font-size:2rem;
    }
    .header{
      justify-content: center;
+    font-size:2rem;
    }
    .nPut{
     margin-top:2rem;
     width:100%;
+   }
+   .addButton {
+     font-size:1rem;
    }
  }
 
 /* app body */
 .todo-contain{
   width: 90%; 
+   font-size:1.2rem;
   margin: 0 auto;
  justify-content: center;
 }
@@ -133,10 +142,11 @@ input {
   text-decoration: line-through;
 }
 
+
 /* Media Queries for app body */
 @media (max-width:955px){
   .todo-contain{
-    font-size:.9rem;
+    font-size:1rem;
   }
 }
 @media (max-width:846px){
@@ -160,9 +170,7 @@ input {
 button {
   background-color: transparent;
   border: 1px solid #e64944;
-  color: white;
-  font-size: 16px;
- 
+  color: white; 
 }
 
 input::placeholder {
@@ -172,7 +180,6 @@ input::placeholder {
 .btn{
 display:flex;
      flex-direction: row;
-  overflow: hidden;
 padding:4rem;
 }
 .btn-contain2{
@@ -181,9 +188,17 @@ padding:4rem;
   margin-top:2rem;
 }
 .clr-btn{
-  width:8rem;
+font-size:1.2rem; 
+width:15rem 
 }
 
+@media (max-width:700px){
+  .btn-contain2{
+    font-size:1rem;
+    display:flex;
+    flex-direction: column;
+  }
+}
 @media (max-width:595){
  .todo-list{
    width:100%;
