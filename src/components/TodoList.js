@@ -4,23 +4,18 @@
 import React from 'react';
 import Todo from './Todo';
 
-const ClearData = () => {
-    localStorage.clear();
-}
+
 const TodoList = (props) => {
     return (
-        <div className='todo-list'>
+        <>
+            <div className='todo-list'>
             {props.task.map((task) => (
                 <Todo key={task.id} task={task} toggleTask={props.toggleTask} />
             ))}
-            <div className='btn-contain2'>
-            <button className='clr-btn' onClick={props.clearCompleted}>
-                Clear Completed Tasks
-            </button>
-            <button className='clr-btn' onClick={ClearData}>
-                    Clear Local app data</button>
+        
             </div>
-        </div>
+       
+        </>
     )
 }
 

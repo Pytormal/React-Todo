@@ -7,6 +7,8 @@ import VideoBg from "reactjs-videobg";
 
 import './components/reset.css'
 import './components/main.css'
+import './components/dual-screen.css'
+
 
 const task = [
   {
@@ -35,6 +37,10 @@ const task = [
     completed: false
   }
 ]
+
+const ClearData = () => {
+  localStorage.clear();
+}
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -83,7 +89,9 @@ class App extends React.Component {
     })
   }
 
-  render() {
+ 
+
+  render(props) {
     return (
       <section className='App'>
         <div className="h-container">
@@ -91,17 +99,29 @@ class App extends React.Component {
           <TodoForm addToDo={this.addToDo} />
         </div>
         
+  <div className="split">      
+        
         <div className="todo-contain">
           <TodoList
             toggleTask={this.toggleTask}
             task={this.state.task}
             clearCompleted={this.clearCompleted}
           />
+          </div>
+          
+         <div className='btn-contain2'>
+          <button className='clr-btn' onClick={this.clearCompleted}>
+            Clear Completed Tasks
+            </button>
+          <button className='clr-btn' onClick={ClearData}>
+            Clear Local app data</button>
+          </div>
+          
         </div>
 
-        <VideoBg >
+        {/* <VideoBg >
           <VideoBg.Source src={'https://player.vimeo.com/external/384669529.sd.mp4?s=9298f360e4c1b897d738481bcfdc4a2f607e442a&profile_id=139&oauth2_token_id=57447761'} type="" />
-        </VideoBg>
+        </VideoBg> */}
 
       </section>
     );
