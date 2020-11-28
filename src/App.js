@@ -119,9 +119,9 @@ class App extends React.Component {
           
         </div>
 
-        {/* <VideoBg >
+        <VideoBg >
           <VideoBg.Source src={'https://player.vimeo.com/external/384669529.sd.mp4?s=9298f360e4c1b897d738481bcfdc4a2f607e442a&profile_id=139&oauth2_token_id=57447761'} type="" />
-        </VideoBg> */}
+        </VideoBg>
 
       </section>
     );
