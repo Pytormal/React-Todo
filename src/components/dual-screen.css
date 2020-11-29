@@ -30,7 +30,7 @@
 }
 
 .todo-contain{ 
-    height:395px;
+    height:350px;
 }
 .todo-contain,.h-container{
     margin-inline-start: env(fold-height);
