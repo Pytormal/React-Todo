@@ -31,6 +31,7 @@
 
 .todo-contain{ 
     height:350px;
+    font-size:1rem;
 }
 .todo-contain,.h-container{
     margin-inline-start: env(fold-height);
@@ -50,4 +51,10 @@
 .clr-btn{
     height:4rem;
 }
+}
+
+@media (screen-spanning: single-fold-vertical), (screen-spanning: single-fold-horizontal) {
+   body {
+      background-color: green;
+   }
 }
