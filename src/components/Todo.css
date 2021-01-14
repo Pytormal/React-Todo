@@ -1,0 +1,24 @@
+.toDo-list{
+    color: aqua
+}
+
+.item{
+    width: 22rem;
+}
+.tagged > p{
+    color: red;
+}
+
+html {
+     background-color: #282c34;
+     height:100vh;
+}
+input{
+    background-color: transparent;
+    border-bottom:.1rem dashed teal;
+}
+
+.form-btn{
+    color:pink;
+    background-color:darkblue;
+}
