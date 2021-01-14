@@ -21,28 +21,33 @@ const toDoList = [
     tagged: false,
   },
   {
-    name: 'optimized and responsive with Desktop. . . .',
+    name: 'optimized and responsive with **Desktop. . . .',
     id: 773,
     tagged: false,
   },
   {
-    name: 'mobile smart phones,',
+    name: 'mobile **smart phones,',
     id: 774,
     tagged: false,
   },
   {
-    name: ' with the dual screen Surface Duo',
+    name: ' with the **dual screen Surface Duo',
     id: 775,
     tagged: false,
   },
   {
-    name: 'touch or click a itme to tag it as completed',
+    name: 'touch or click a item to tag it as completed',
     id: 776,
     tagged: false,
   },
   {
     name: 'click to remove completed items',
     id: 777,
+    tagged: false,
+  },
+  {
+    name: '** features to be made in upcoming updates',
+    id: 778,
     tagged: false,
   },
 ];
