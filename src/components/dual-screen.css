@@ -1,4 +1,4 @@
-@media (screen-spanning: single-fold-vertical) {
+/* @media (screen-spanning: single-fold-vertical) {
   .split{
     height:100vh;
     display:flex;
@@ -57,4 +57,4 @@
    body {
       background-color: green;
    }
-}
+} */
